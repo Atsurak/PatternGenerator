@@ -1,8 +1,8 @@
 package theGenerator;
 
 public class calcPattern {
-    public double ourCircRad;
-    public int ourSqSide, ourSqP;
+    private double ourCircRad;
+    private int ourSqSide, ourSqP;
     
     public calcPattern(int dim){
         this.ourCircRad=(double)dim;

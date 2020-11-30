@@ -3,7 +3,7 @@ package theGenerator;
 import java.awt.*;  
 
 public class Ellipse extends Shape{
-    public int length, breadth;
+    private int length, breadth;
     
     public Ellipse(int x, int y, int length, int breadth, Color color, int shapeID, double rotation){
         super(x,y,color, shapeID, rotation);

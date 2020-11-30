@@ -6,9 +6,9 @@ import javax.swing.*;
 
 public class drawPattern extends Canvas implements ActionListener{
     
-    public Shape s[];
-    public int patternCh, shapeCh, noShapes, dimx, dimy, patternDim;
-    Color color;
+    private Shape s[];
+    protected int patternCh, shapeCh, noShapes, dimx, dimy, patternDim;
+    protected Color color;
     
     @Override
     public void actionPerformed(ActionEvent event){
