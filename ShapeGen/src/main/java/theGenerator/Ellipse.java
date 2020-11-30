@@ -11,12 +11,12 @@ import java.awt.*;
  * @author HARSH MEENA
  */
 public class Ellipse extends Shape{
-    public int radius1, radius2;
+    public int length, breadth;
     
-    public Ellipse(int x, int y, int radius1, int radius2, Color color, int shapeID, double rotation){
+    public Ellipse(int x, int y, int length, int breadth, Color color, int shapeID, double rotation){
         super(x,y,color, shapeID, rotation);
-        this.radius1=radius1;
-        this.radius2=radius2;
+        this.length=length;
+        this.breadth=breadth;
     }
     
     @Override
@@ -24,9 +24,9 @@ public class Ellipse extends Shape{
         int dx, dy;
         Graphics2D g2 = (Graphics2D)g; 
         g2.setColor(color);
-        dx = x-(radius1/2);
-        dy = y-(radius2/2);
+        dx = x-(length/2);
+        dy = y-(breadth/2);
         g2.rotate(Math.toRadians(rotation));
-        g2.fillOval(dx,dy,radius1,radius2);
+        g2.fillOval(dx,dy,length,breadth);
     }
 }

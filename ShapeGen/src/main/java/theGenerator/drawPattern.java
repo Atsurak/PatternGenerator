@@ -14,7 +14,7 @@ import javax.swing.*;
 public class drawPattern extends Canvas implements ActionListener{
     
     public Shape s[];
-    public int patternCh, shapeCh, noShapes;
+    public int patternCh, shapeCh, noShapes, dimx, dimy;
     Color color;
     
     public void actionPerformed(ActionEvent event){
@@ -23,6 +23,8 @@ public class drawPattern extends Canvas implements ActionListener{
     public drawPattern(int patternCh, int shapeCh, int noShapes, int color, int dimx, int dimy){
         this.patternCh=patternCh;
         this.shapeCh=shapeCh;
+        this.dimx=dimx;
+        this.dimy=dimy;
         switch(color){
             case 0: this.color=Color.RED;break;
             case 1: this.color=Color.BLUE;break;
@@ -54,12 +56,19 @@ public class drawPattern extends Canvas implements ActionListener{
     public void paint(Graphics g) {
         g.translate(400, 400);
         setBackground(Color.WHITE);
-        s[0].paint(g);
+        for (int i = 0; i<noShapes; i++){
+            s[i].paint(g);
+        }
     }
     
     public void drawPat(){
         //System.out.println(patternCh+" "+shapeCh+" "+noShapes+ " "+color);
-        JFrame f=new JFrame("Border Layout");  
+        calcPattern cp = new calcPattern();
+        if(patternCh==0)
+            cp.calcCoordsCirc(s, noShapes);
+        if(patternCh==1)
+            cp.calcCoordsSq(s, noShapes);
+        JFrame f=new JFrame();  
         f.add(this,BorderLayout.CENTER);  
         JButton buttonL = new JButton("<--");
         JButton buttonR = new JButton("-->");
