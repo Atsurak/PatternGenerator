@@ -13,9 +13,9 @@ public class calcPattern {
     public double ourCircRad;
     public int ourSqSide, ourSqP;
     
-    public calcPattern(){
-        this.ourCircRad=300.0;
-        this.ourSqSide=400;
+    public calcPattern(int dim){
+        this.ourCircRad=(double)dim;
+        this.ourSqSide=dim;
     }
     
     public void calcCoordsCirc(Shape s[],int noShapes){

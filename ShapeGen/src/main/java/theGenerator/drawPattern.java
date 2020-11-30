@@ -14,23 +14,30 @@ import javax.swing.*;
 public class drawPattern extends Canvas implements ActionListener{
     
     public Shape s[];
-    public int patternCh, shapeCh, noShapes, dimx, dimy;
+    public int patternCh, shapeCh, noShapes, dimx, dimy, patternDim;
     Color color;
     
+    @Override
     public void actionPerformed(ActionEvent event){
     }   
     
-    public drawPattern(int patternCh, int shapeCh, int noShapes, int color, int dimx, int dimy){
+    public drawPattern(int patternCh, int shapeCh, int noShapes, int color, int dimx, int dimy, int patternDim){
         this.patternCh=patternCh;
         this.shapeCh=shapeCh;
         this.dimx=dimx;
         this.dimy=dimy;
+        if(patternDim>300)
+            patternDim=300;
+        this.patternDim=patternDim;
         switch(color){
             case 0: this.color=Color.RED;break;
             case 1: this.color=Color.BLUE;break;
             case 2: this.color=Color.GREEN;break;
             case 3: this.color=Color.BLACK;break;
             case 4: this.color=Color.ORANGE;break;
+        }
+        if(noShapes<10){
+            noShapes=10;
         }
         this.noShapes=noShapes;
         switch(shapeCh){
@@ -63,11 +70,11 @@ public class drawPattern extends Canvas implements ActionListener{
     
     public void drawPat(){
         //System.out.println(patternCh+" "+shapeCh+" "+noShapes+ " "+color);
-        calcPattern cp = new calcPattern();
+        calcPattern cp = new calcPattern(patternDim);
         if(patternCh==0)
-            cp.calcCoordsCirc(s, noShapes);
+            cp.calcCoordsCirc(s, this.noShapes);
         if(patternCh==1)
-            cp.calcCoordsSq(s, noShapes);
+            cp.calcCoordsSq(s, this.noShapes);
         JFrame f=new JFrame();  
         f.add(this,BorderLayout.CENTER);  
         JButton buttonL = new JButton("<--");
