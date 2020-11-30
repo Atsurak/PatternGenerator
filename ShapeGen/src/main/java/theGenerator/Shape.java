@@ -6,20 +6,19 @@
 package theGenerator;
 
 import java.awt.*;
-import javax.swing.*; 
 /**
  *
  * @author HARSH MEENA
  */
-public class Shape{
+public class Shape extends Canvas{
     public Color color;
-    public boolean fill;
-    public int shapeID;
+    public int shapeID, x, y;
     public double rotation;
     
-    public Shape(Color color, boolean fill, int shapeID, double rotation){
+    public Shape(int x, int y, Color color, int shapeID, double rotation){
+        this.x=x;
+        this.y=y;
         this.color = color;
-        this.fill = fill;
         this.shapeID = shapeID;
         this.rotation = rotation;
     }
