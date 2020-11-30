@@ -10,7 +10,7 @@ import java.awt.*;
  * @author HARSH MEENA
  */
 public class Rectangle extends Shape{
-    public int length, breadth;
+    private int length, breadth;
     
     public Rectangle(int x, int y, int length, int breadth, Color color, int shapeID, double rotation){
         super(x,y,color, shapeID, rotation);

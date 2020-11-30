@@ -10,7 +10,7 @@ import java.awt.*;
  * @author HARSH MEENA
  */
 public class RoundRect extends Shape{
-    public int length, breadth, arc;
+    private int length, breadth, arc;
     public RoundRect(int x, int y, int length, int breadth, int arc, Color color, int shapeID, double rotation){
         super(x,y,color, shapeID, rotation);
         this.length=length;
