@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package theGenerator;
+
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;  
-/**
- *
- * @author HARSH MEENA
- */
+import javax.swing.*; 
+
 public class drawPattern extends Canvas implements ActionListener{
     
     public Shape s[];

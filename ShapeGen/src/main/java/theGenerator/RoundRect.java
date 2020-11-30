@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package theGenerator;
+
 import java.awt.*;  
-/**
- *
- * @author HARSH MEENA
- */
+
 public class RoundRect extends Shape{
     public int length, breadth, arc;
     public RoundRect(int x, int y, int length, int breadth, int arc, Color color, int shapeID, double rotation){
