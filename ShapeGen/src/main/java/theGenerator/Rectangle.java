@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 package theGenerator;
-
+import java.awt.*;
+import javax.swing.*;  
 /**
  *
  * @author HARSH MEENA
  */
 public class Rectangle extends Shape{
-    public double length;
-    public double breadth;
+    public int length, breadth;
     
-    public Rectangle(double length, double breadth, String color, boolean fill, int shapeID, double rotation){
+    public Rectangle(int length, int breadth, Color color, boolean fill, int shapeID, double rotation){
         super(color, fill, shapeID, rotation);
         this.length=length;
         this.breadth=breadth;

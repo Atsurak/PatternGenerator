@@ -5,15 +5,16 @@
  */
 package theGenerator;
 
+import java.awt.*;
+import javax.swing.*;  
 /**
  *
  * @author HARSH MEENA
  */
 public class Ellipse extends Shape{
-    public double radius1;
-    public double radius2;
+    public int radius1, radius2;
     
-    public Ellipse(double radius1, double radius2, String color, boolean fill, int shapeID, double rotation){
+    public Ellipse(int radius1, int radius2, Color color, boolean fill, int shapeID, double rotation){
         super(color, fill, shapeID, rotation);
         this.radius1=radius1;
         this.radius2=radius2;

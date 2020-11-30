@@ -5,17 +5,19 @@
  */
 package theGenerator;
 
+import java.awt.*;
+import javax.swing.*; 
 /**
  *
  * @author HARSH MEENA
  */
-public class Shape {
-    public String color;
+public class Shape{
+    public Color color;
     public boolean fill;
     public int shapeID;
     public double rotation;
     
-    public Shape(String color, boolean fill, int shapeID, double rotation){
+    public Shape(Color color, boolean fill, int shapeID, double rotation){
         this.color = color;
         this.fill = fill;
         this.shapeID = shapeID;
